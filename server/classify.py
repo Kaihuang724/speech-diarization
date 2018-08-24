@@ -196,9 +196,13 @@ import learn
 def start_learn():
     learn.record_learn()
 
+import record_test
+@app.route("/record_test", methods=["GET"])
+def start_record():
+    record_test.record_test()
+
 if __name__ == '__main__':
     import sys
-    #a = sys.argv[1]
     print(("Loading Keras model and Flask starting server..."
         "Please wait until server has fully started"))
     app.run(debug=False, threaded=False)

@@ -11,7 +11,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+            <a href="http://127.0.0.1:5000/learn"> Click here to start recording for training data </a>
+            <a href="http://127.0.0.1:5000/test"> Click here to start recording for test data </a>
+            <a href="http://127.0.0.1:5000/predict"> Click here to begin prediction </a>
         </p>
       </div>
     );
