@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'react-skeleton-css/styles/skeleton.2.0.4.css'
+// normalize is also available
+import 'react-skeleton-css/styles/normalize.3.0.2.css';
 
 class App extends Component {
   render() {
