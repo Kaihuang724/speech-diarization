@@ -194,12 +194,21 @@ def predict():
 import learn
 @app.route("/learn", methods=["GET"])
 def start_learn():
-    learn.record_learn()
+    data = {"success": False}
+
+    if flask.request.method == "GET":
+        name = flask.request.args.get('name')
+        image_list = learn.record_learn(name)
+        data["image_list"] = image_list
+        data["success"] = True
+
+    return flask.jsonify(data)
 
 import record_test
 @app.route("/record_test", methods=["GET"])
 def start_record():
-    record_test.record_test()
+    name = flask.request.args.get('name')
+    record_test.record_test(name)
 
 if __name__ == '__main__':
     import sys

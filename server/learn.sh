@@ -5,6 +5,7 @@ mkdir -p ../data/train/$1
 mv $1.wav ../data/train/$1
 
 ffmpeg -i ../data/train/$1/$1.wav -f segment -segment_time 5 -c copy ../data/train/$1/out%03d.wav
+rm ../data/train/$1
 rm ../data/train/$1/$1.wav
 for file in ../data/train/$1/*.wav
 do
